@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0061a7;
+  background-image: url("./img/bg-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+header {
+  padding: 47px 20px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 53px;
+  padding: 0 20px;
+}
+
+.image img {
+  max-width: 100%;
+}
+
+.info {
+  align-self: start;
+  margin-top: 42px;
+} 
+
+.info h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+  color: #ffffff;
+}
+
+.info p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.info a {
+  display: inline-block;
+  margin-top: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+  padding: 13px 0 16px 0;
+  border-radius: 100px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  color: #18a0fb;
+  background-color: #fff;
+  transition: 0.2s ease-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.info a:hover {
+  color: #fff;
+  background-color: #18a0fb;
+}
+
+footer {
+  padding: 0 20px 40px 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul {
+  display: flex;
+  gap: 16px;
+}
+
+ul li {
+  list-style: none;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  transition: 0.2s;
+}
+
+li a {
+  margin: auto;
+  max-height: 29px;
+}
+
+a svg {
+  max-width: 29px;
+  max-height: 29px;
+}
+
+li:hover {
+  border-color: #18a0fb;
+}
+
+path {
+  transition: 0.2s;
+}
+
+li:hover path {
+  fill: #18a0fb;
+}
+
+@media (max-width: 1200px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .info {
+    margin-top: initial;
+  }
+  footer {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    display: block;
+    gap: 20px;
+  }
+  main {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
+  }
+  .info {
+    text-align: center;
+  }
+  .image img {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    background-image: url("./img/bg-mobile.svg");
+    background-size: contain;
+  }
+  header {
+    text-align: center;
+  }
+  header img {
+    max-width: 150px;
+  }
+  .info h1 {
+    font-size: 1.5rem;
+    line-height: initial;
+  }
+  .info p {
+    line-height: initial;
+  }
+  .info a {
+    max-width: 250px;
+    width: 100%;
+  }
+  footer {
+    justify-content: center;
+  }
+}
